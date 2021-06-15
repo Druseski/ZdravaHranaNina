@@ -5,7 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+    <PackageReference Include="morelinq" Version="3.3.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ZdravaHranaNinaData\ZdravaHranaNinaData.csproj" />
+    <ProjectReference Include="..\ZdravaHranaNinaEntities\ZdravaHranaNinaEntities.csproj" />
   </ItemGroup>
 
 </Project>

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ZdravaHranaNinaEntities
 {
-    public class WhishList
+    public class WishList
     {
         [Key]
         public int Id { get; set; }

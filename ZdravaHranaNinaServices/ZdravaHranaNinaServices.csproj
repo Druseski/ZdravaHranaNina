@@ -5,7 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ZdravaHranaNinaEntities\ZdravaHranaNinaEntities.csproj" />
+    <ProjectReference Include="..\ZdravaHranaNinaRepositories\ZdravaHranaNinaRepositories.csproj" />
   </ItemGroup>
 
 </Project>

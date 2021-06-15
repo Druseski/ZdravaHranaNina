@@ -13,6 +13,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using ZdravaHranaNina.Data;
 using ZdravaHranaNinaData;
+using ZdravaHranaNinaRepositories;
+using ZdravaHranaNinaRepositories.Interfaces;
+using ZdravaHranaNinaServices;
+using ZdravaHranaNinaServices.Interfaces;
 
 namespace ZdravaHranaNina
 {
@@ -35,6 +39,20 @@ namespace ZdravaHranaNina
                 .AddEntityFrameworkStores<DataContext>();
             services.AddControllersWithViews();
             services.AddRazorPages();
+
+            services.AddTransient<IProductRepository, ProductRepository>();
+            services.AddTransient<ICategoryRepository, CategoryRepository>();
+            services.AddTransient<IOrderRepository, OrderRepository>();
+            services.AddTransient<IShoppingCartRepository, ShoppingCartRepository>();
+            services.AddTransient<IWishListRepository, WishListRepository>();
+
+            services.AddTransient<IProductService, ProductService>();
+            services.AddTransient<ICategoryService, CategoryService>();
+            services.AddTransient<IOrderService, OrderService>();
+            services.AddTransient<IShoppingCartService, ShoppingCartService>();
+            services.AddTransient<IWishListService, WishListService>();
+            services.AddTransient<IUserService, UserService>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
