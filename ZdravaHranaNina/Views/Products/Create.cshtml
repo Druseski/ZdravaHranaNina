@@ -1,0 +1,152 @@
+﻿@model ZdravaHranaNina.Models.ProductViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Product</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BestBefore" class="control-label"></label>
+                <input asp-for="BestBefore" class="form-control" />
+                <span asp-validation-for="BestBefore" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateManifactured" class="control-label"></label>
+                <input asp-for="DateManifactured" class="form-control" />
+                <span asp-validation-for="DateManifactured" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Manifacturer" class="control-label"></label>
+                <input asp-for="Manifacturer" class="form-control" />
+                <span asp-validation-for="Manifacturer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Discription" class="control-label"></label>
+                <input asp-for="Discription" class="form-control" />
+                <span asp-validation-for="Discription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserID" class="control-label"></label>
+                <input asp-for="UserID" class="form-control" />
+                @*<span asp-validation-for="UserID" class="text-danger"></span>*@
+            </div>
+            <div class="form-group">
+                <input asp-for="CategoryName" hidden type="text" id="CategoryName" class="form-control" />
+                <label asp-for="CategoryID" for="CategoryID" class="form-label"></label>
+                <select asp-for="CategoryID" class="form-select form-control" asp-items="ViewBag.CategoryList" id="CategoryID"></select>
+                <a class="btn btn-success btn-sm btn-add-new-custom" data-toggle="modal" data-target="#categoryModal">Add New Category</a>
+            </div>
+            <div class="form-group">
+                <label asp-for="Shipping" class="control-label"></label>
+                <input asp-for="Shipping" class="form-control" />
+                <span asp-validation-for="Shipping" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                @*<label asp-for="PhotoURL" class="control-label"></label>*@
+                <input hidden asp-for="PhotoURL" type="text" id="PhotoURL" class="form-control" />
+                @*<span asp-validation-for="PhotoURL" class="text-danger"></span>*@
+            </div>
+            <div class="form-group">
+                <label asp-for="SoldItems" class="control-label"></label>
+                <input asp-for="SoldItems" class="form-control" />
+                <span asp-validation-for="SoldItems" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Rating" class="control-label"></label>
+                <input asp-for="Rating" class="form-control" />
+                <span asp-validation-for="Rating" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateAdded" class="control-label"></label>
+                <input asp-for="DateAdded" class="form-control" />
+                <span asp-validation-for="DateAdded" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CountryOfOrigin" class="control-label"></label>
+                <input asp-for="CountryOfOrigin" class="form-control" />
+                <span asp-validation-for="CountryOfOrigin" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Popularity" /> @Html.DisplayNameFor(model => model.Popularity)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="ByWeight" /> @Html.DisplayNameFor(model => model.ByWeight)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="ByPeace" /> @Html.DisplayNameFor(model => model.ByPeace)
+                </label>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+
+        <div class="row form-group align-content-center ">
+            <div class="col-12">
+                <label>Upload Photo - Book Cover </label>
+                <br />
+                <input type="file" #file accept="image/*" id="photoUpload" />
+                <span asp-validation-for="PhotoURL" class="text-danger"></span>
+            </div>
+            <div class="col-12">
+                <button class="btn btn-custom-upload btn-block mt-2" id="uploadPhoto">Upload Photo </button>
+            </div>
+        </div>
+
+        <div class="modal fade" id="categoryModal" tabindex="-1" role="dialog" aria-labelledby="categoryModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="categoryModalLabel">Add New Category</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" class="form-control" asp-for="CategoryNameDTO" placeholder="Enter Name..." />
+                            <span asp-validation-for="CategoryNameDTO" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="addNewCategory">Add New Category</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script src="~/js/Product.js"></script>
+}

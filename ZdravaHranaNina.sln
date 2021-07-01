@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31321.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZdravaHranaNina", "ZdravaHranaNina\ZdravaHranaNina.csproj", "{C562F5C4-5FBF-448E-90C0-65D5EBE2E9BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZdravaHranaNina", "ZdravaHranaNina\ZdravaHranaNina.csproj", "{C562F5C4-5FBF-448E-90C0-65D5EBE2E9BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZdravaHranaNinaData", "ZdravaHranaNinaData\ZdravaHranaNinaData.csproj", "{89C6CCA6-09A5-4A67-91A7-0BADAA30426C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZdravaHranaNinaData", "ZdravaHranaNinaData\ZdravaHranaNinaData.csproj", "{89C6CCA6-09A5-4A67-91A7-0BADAA30426C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZdravaHranaNinaEntities", "ZdravaHranaNinaEntities\ZdravaHranaNinaEntities.csproj", "{8957BF09-F306-49B1-8C70-2FCE504B2AB5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZdravaHranaNinaEntities", "ZdravaHranaNinaEntities\ZdravaHranaNinaEntities.csproj", "{8957BF09-F306-49B1-8C70-2FCE504B2AB5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZdravaHranaNinaRepositories", "ZdravaHranaNinaRepositories\ZdravaHranaNinaRepositories.csproj", "{02C0F71C-96AE-4C34-AC9A-005D4B8EECB0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZdravaHranaNinaRepositories", "ZdravaHranaNinaRepositories\ZdravaHranaNinaRepositories.csproj", "{02C0F71C-96AE-4C34-AC9A-005D4B8EECB0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZdravaHranaNinaServices", "ZdravaHranaNinaServices\ZdravaHranaNinaServices.csproj", "{33A43CA5-02D3-4EFF-91F1-5E97D16027D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZdravaHranaNinaServices", "ZdravaHranaNinaServices\ZdravaHranaNinaServices.csproj", "{33A43CA5-02D3-4EFF-91F1-5E97D16027D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZdravaHranaNinaAPI", "ZdravaHranaNinaAPI\ZdravaHranaNinaAPI.csproj", "{8F15D1A9-503F-41E7-B180-B50DCDA1985F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{33A43CA5-02D3-4EFF-91F1-5E97D16027D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33A43CA5-02D3-4EFF-91F1-5E97D16027D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33A43CA5-02D3-4EFF-91F1-5E97D16027D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F15D1A9-503F-41E7-B180-B50DCDA1985F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F15D1A9-503F-41E7-B180-B50DCDA1985F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F15D1A9-503F-41E7-B180-B50DCDA1985F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F15D1A9-503F-41E7-B180-B50DCDA1985F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

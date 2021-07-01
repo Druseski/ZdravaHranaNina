@@ -1,31 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
+using ZdravaHranaNinaEntities;
 
-namespace ZdravaHranaNinaEntities
+namespace ZdravaHranaNina.Models
 {
-    public class Product
+    public class ProductViewModel
     {
         [Key]
         public int Id { get; set; }
-     
-    
+        [Required]
+        [MaxLength(50)]
         public string Name { get; set; }
-     
+        [Required]
 
         public DateTime BestBefore { get; set; }
-  
+        [Required]
 
         public DateTime DateManifactured { get; set; }
-       
+        [Required]
 
         public double Price { get; set; }
-     
- 
+        [Required]
+        [MaxLength(50)]
         public string Manifacturer { get; set; }
-    
-   
+        [Required]
+        [MaxLength(1500)]
         public string Discription { get; set; }
 
         public int UserID { get; set; }
@@ -55,5 +57,8 @@ namespace ZdravaHranaNinaEntities
         public bool ByWeight { get; set; }
 
         public bool ByPeace { get; set; }
+
+        [StringLength(100)]
+        public string CategoryNameDTO { get; set; }
     }
 }
